@@ -1,4 +1,4 @@
-
+# Docker , golang, postgres
 brew install golang-migrate
 
 
@@ -93,5 +93,8 @@ https://github.com/lib/pq
 
 docker network create <network_name>
 
+docker network create bank-network
 
 docker network connect <network_name> <container_name>
+
+docker network connect bank-network 
