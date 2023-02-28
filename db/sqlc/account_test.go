@@ -1,4 +1,5 @@
 package db
+
 import {
 	"context"
 	"testing"
@@ -7,7 +8,7 @@ import {
 }
 
 
-func TestCreateAccount(t *testin.T) {
+func TestCreateAccount(t *testing.T) Account{
 	arg := CreateAccountParams {
 		Owner: "tom",
 		Balance: 100,
