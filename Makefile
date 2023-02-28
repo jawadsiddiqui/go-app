@@ -22,4 +22,4 @@ sqlc:
 migrate:
 	migrate create -ext sql -dir db/migration -seq init_schema
 
-.PHONEY: postgres createdb dropdb migrateup migratedown sqlc
+.PHONEY: postgres createdb dropdb migrateup migratedown sqlc migrate

@@ -1,6 +1,12 @@
 
 brew install golang-migrate
 
+
+go env
+go env -w GO111MODULE=auto
+go mod init
+go mod tidy
+
 Migrate create Schema 
 
 migrate create -ext sql -dir db/migration -seq init_schema
@@ -56,3 +62,36 @@ Created —username=root —owner=root simple_bank
 
 History | grep “docker run”
 
+
+
+
+docker build -t simplebank:latest
+
+
+
+Docker removal of image
+docker rmi <imagename>
+
+
+
+Inspect Docker
+docker cotnainer inspect <container>
+
+
+docker run --name simplebank -p 8080:8080 -e GIN_MODE=release -e DB_SOURCE="" simplebank:latest
+
+
+
+Inspect docker network 
+docker network ls
+
+
+
+Some library
+https://github.com/lib/pq
+
+
+docker network create <network_name>
+
+
+docker network connect <network_name> <container_name>
